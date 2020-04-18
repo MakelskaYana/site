@@ -1,0 +1,636 @@
+	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,400;1,400;1,700&family=Roboto+Condensed:wght@400;700&display=swap');
+	@font-face{ 
+	font-family:'Bebas Neue Cyrillic';
+	src: url('fonts/bebas_neue_cyrillic/bebasneue_regular-webfont.eot');
+	src: url('fonts/bebas_neue_cyrillic/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/bebas_neue_cyrillic/bebasneue_regular-webfont.woff') format('woff'),
+	     url('fonts/bebas_neue_cyrillic/bebasneue_regular-webfont.ttf') format('truetype'); 
+	}	
+	/*@font-face{
+	font-family:'Bebas Neue Cyrillic';
+	src:url('font/bebas/bebasneue_regular-webfont.eot');
+  	src: url('font/bebas/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bebas/bebasneue_regular-webfont.woff') format('woff'),
+         url('font/bebas/bebasneue_regular-webfont.ttf') format('truetype');
+   	} почему -то не работает*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+/*	font-family: 'Bebas Neue', cursive;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;*/
+	header{
+		background: #6ac4b8;
+	}
+	.parent_of_inline{
+		font-size: 0;
+	}
+	.wrapper{
+		width: 960px;
+		margin:0 auto;
+	}
+	.service_menu {
+		background: #8cd3c9 url("lap_header.png") -7px 1px repeat-x;
+		text-align: center;
+	}
+	.service_menu li{
+		display: inline-block;
+		padding-right: 15px;
+		position: relative;
+		background: #8cd3c9;
+	}
+	.service_menu li:after{
+		position: absolute;
+		display: block;
+		content: "";
+		right: 0;
+		top:9px;
+		width: 15px;
+		height: 15px;
+		background: url("sprite_vertical.png") -58px 65px;
+	}
+	.service_menu li:first-child{
+		padding-left:15px;
+	}
+	.service_menu li:first-child:before{
+		position: absolute;
+		display: block;
+		content: "";
+		left: 0;
+		top:9px;
+		width: 15px;
+		height: 15px;
+		background:url("sprite_vertical.png") -58px 65px;
+	}
+	a{
+		text-decoration: none;
+	}
+	.service_menu a{
+		display: block;
+		font: 14px/14px 'Open Sans',sans-serif ;
+		color: #fff;
+		padding:9px 18px;
+		position: relative;
+	}
+	.service_menu a:after{
+		position: absolute;
+		display: block;
+		content: " ";
+		left: 15px;
+		right: 15px;
+		bottom: 8px;
+		border-bottom: 1px solid #fff;
+	}
+	.container{
+	}
+	.logo_sign{
+		display: inline-block;
+		margin:10px 116px 13px 0;
+		vertical-align: top;
+	}
+	.logo_sign p{
+		font: bold 20px 'Roboto Condensed',sans-serif;
+		color:#157d8c;
+		margin: 3px 0 0 6px;
+	}
+	.search{
+		display: inline-block;
+		color:#157d8c;
+		margin: 26px 0 36px;
+		vertical-align: top;
+	}
+	.search h1{
+		font: italic 22px 'Open Sans',sans-serif;
+		margin-bottom: 8px;
+		margin-left:-1px;
+	}
+	.search h1 span{
+		font: italic bold 22px 'Open Sans',sans-serif;
+	}
+	.search input[type="text"]{
+		width: 412px;
+		height: 30px;
+		padding-left: 20px;
+		box-sizing: border-box;
+		border:none;
+	}
+	.search input[type="text"]::placeholder{
+		color: #92d4cb;
+		font: 12px 'Open Sans',sans-serif;
+	}
+	.search input[type="submit"]{
+		width: 30px;
+		height: 30px;
+		background:#157d8c url("sprite_vertical.png") 0 -406px;
+		border:none;
+		margin-left: 5px;
+	}
+	.container_for_image{
+		display: inline-block;
+		background:url("sprite_vertical.png") 0 -158px;
+		width: 175px;
+		height: 116px;
+		margin: 10px 0 4px 111px;
+		vertical-align: top;
+	}
+
+	header nav{
+		border-top: 1px solid #85e8db;
+		/*border-top: 1px solid #99dad2;*/
+	}
+
+	nav ul li{
+		display: inline-block;
+		padding-right: 19px;
+		vertical-align: top;
+		position: relative;
+	}
+	nav ul li:after{
+		position: absolute;
+		display: block;
+		content: "";
+		top:17px;
+		right: 0;
+		width: 17px;
+		height: 18px;
+		background:url("sprite_vertical.png") -82px -275px;
+	}
+
+	nav ul li:first-child{
+		padding-left: 15px;
+	}
+	/*header nav ul li:last-child{
+		padding-right: 17px;
+	}*/
+	nav ul li:first-child:before{
+		position: absolute;
+		display: block;
+		content: "";
+		top:17px;
+		left:0;
+		width: 18px;
+		height: 18px;
+		background:url("sprite_vertical.png") -82px -275px;
+	}
+	nav ul li a{
+		font:20px/53px 'Roboto Condensed',sans-serif;
+		color: #fff;
+		display: block;
+		padding: 0 22.5px;
+	}
+	nav ul li:last-child a{
+	    padding: 0 18px 0 25px;
+	}
+	
+	main{
+		margin: 0 auto;
+		padding-top: 31px;
+	}
+	main .container_for_news{
+		display: inline-block;
+		vertical-align: top;
+	}
+	main .slider_elem{
+		position: relative;
+	}
+	main .slider_elem span{
+		position: absolute;
+		content: "";
+		display: block;
+		left:39px;
+		top:21px;
+		text-transform: uppercase;
+		font:bold 37px 'Bebas Neue Cyrillic';
+		color:#fed34f;
+	}
+	main .slider_elem span+span{
+		top:61px;
+		font:bold 42px 'Bebas Neue Cyrillic';
+		color:#fff;
+	}
+	main .slider_elem .controller{
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		bottom:16px;
+	}
+	main .slider_elem .controller li{
+		display: inline-block;
+		margin-left: 8px;
+	}
+	main .slider_elem .controller li:first-child{
+		margin-left: 0;
+	}
+	main .slider_elem .controller a.active{
+		background: #fff;
+	}
+	main .slider_elem .controller a{
+		display: block;
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		border:1px solid white;
+	}
+	main section{
+		margin-top: 22px;
+		text-align: center;
+	}
+	main section h2{
+		margin-bottom:2px;
+		font:bold 31px 'Roboto Condensed';
+		
+	}
+	section article{
+		border-top: 1px solid #e3e3e3;
+		padding:30px 0;
+	}
+	.container_for_article{
+		display: inline-block;
+		font-size: 20px;
+		width: 368px;
+		margin-left: 17px;
+		text-align: left;
+		vertical-align: top;
+	}
+	section article h3 a{
+		border-bottom: 1px solid #383838;
+		font:18px/20px 'Roboto Condensed';
+		color: #383838;
+		vertical-align: top;
+	}
+	section article .container_for_article>a{
+		border-bottom: 1px solid #6ac4b8;
+		font:16px 'Roboto Condensed';
+		color:#6ac4b8;
+	}
+	section article .container_for_article p{
+		font:14px/19px 'Open Sans';
+		color: #777;
+		padding-bottom:15px;
+	}
+	section article .container_for_client{
+		padding:18px 0;
+		font-size: 0;
+	}
+	section article .container_for_client a{
+		font:14px 'Open Sans';
+		color: #6ac4b8;
+		display: inline-block;
+		box-sizing: border-box;
+		position: relative;
+		padding-left:23px;
+		margin-right: 28px;
+	}
+	section article .container_for_client a:before{
+		position: absolute;
+		display: block;
+		top:1px;
+		left:0;
+		content: "";
+		width: 18px;
+		height: 16px;
+		background:url("sprite_vertical.png") 1px -272px;
+	}
+	section article .container_for_client a:nth-child(2){
+		margin-right: 18px;
+	}
+	section article .container_for_client a:nth-child(2):before{
+		top:4px;
+		background:url("sprite_vertical.png") -64px -273px;
+	}
+	section article .container_for_client a:nth-child(3):before{
+		top:3px;
+		width: 17px;
+		background:url("sprite_vertical.png") -32px -273px;
+	}
+	main aside{
+		display: inline-block;
+		height: 810px;
+		width: 300px;
+		margin-left: 30px;
+		vertical-align: top;
+	}
+	main aside .interview p{
+		font:bold 22px/39px 'Roboto Condensed';
+		color: #fff;
+		background: #fed34f;
+		text-align: center;
+	}
+	main aside .interview form{
+		padding:26px 19px 21px;
+		font:18px/25px 'Roboto Condensed';
+		color:#383838;
+		background: #f3f3f3;
+	}
+	main aside .interview form input[type="checkbox"]{
+		display: none;
+	}
+	main aside .interview form label:nth-child(2){
+		margin-top: 18px;
+	}
+	main aside .interview form label{
+		display: block;
+		font:14px/35px 'Open Sans';
+		color:#999999;
+		cursor: pointer;
+		padding-left: 26px;
+		position: relative;
+	}
+	main aside .interview form label:before{
+		position: absolute;
+		display: block;
+		content: "";
+		left: 0;
+		top:8px;
+		width: 12px;
+		height: 12px;
+		border:1px solid #e3e3e3;
+		background: #fff;
+	}
+	main aside .interview form input:checked+label:before{
+		background: #fed34f;
+	}
+	main aside .interview form input:checked+ label:after{
+		position: absolute;
+		display: block;
+		content: "";
+		left: 1px;
+		top:9px;
+		width: 12px;
+		height: 6px;
+		border-bottom:1px solid #e3e3e3;
+		border-left:1px solid #e3e3e3;
+		transform:rotate(-40deg);
+		}
+	main aside .interview form input:checked+label{
+		color:#383838;
+	}
+	.interview ul {
+
+	}
+	.interview ul li{
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.interview ul li:last-child{
+		margin-right: 0;
+	}
+	.interview ul li a{
+		font:18px/21px 'Roboto Condensed';
+		border-bottom: 1px solid #fed34f;
+		color: #fed34f;
+		display: block;
+		padding-top: 32px;
+		position: relative;
+	}
+	.interview ul li a:before{
+		position: absolute;
+		display: block;
+		content: "";
+		left: 37px;
+		top:9px;
+		width: 16px;
+		height: 16px;
+		background: url("sprite_vertical.png") -115px -273px;
+	}
+	.container_for_discus{
+		margin-top: 62px;
+	}
+	.container_for_discus p{
+		font:bold 22px/39px 'Roboto Condensed';
+		color: #fff;
+		background: #91d35f;
+		text-align: center;
+	}
+	.container_for_discus span{
+		font:14px 'Open Sans';
+		color: #91d35f;
+		display: inline-block;
+		box-sizing: border-box;
+		position: relative;
+		padding:8px 0 8px 23px;
+		margin-right:13px;
+	}
+	.container_for_discus span:before{
+		position: absolute;
+		display: block;
+		top:8px;
+		left:0;
+		content: "";
+		width: 16px;
+		height: 16px;
+		background:url("sprite_vertical.png") -48px -272px;
+	}
+	.container_for_discus span+span:before{
+		background:url("sprite_vertical.png") -16px -272px;
+	}
+	.container_for_discus h3 a{
+	    border-bottom: 1px solid #383838;
+   		font: 18px/20px 'Roboto Condensed';
+    	color: #383838;
+	}
+	.container_for_advices{
+		background:#f3f3f3 url("lap_advice.png") 0 22px repeat-x;
+		text-align: center;
+	}
+	.container_for_advices h2{
+		font: bold 32px 'Roboto Condensed';
+		display: inline-block;
+		padding: 23px 0 4px;
+		color:#383838;
+		background: #f3f3f3;
+	}
+	.container_for_advices .all_advices{
+		padding:26px 0;
+		border-top: 1px solid #e6e2e2;
+	}
+	.container_for_advices .all_advices .advice_elem{
+		display: inline-block;
+		position: relative;
+	}
+	.container_for_advices .all_advices .advice_elem:nth-child(2){
+		margin:0 30px;
+	}
+	.container_for_advices .all_advices .advice_elem p{
+		position: absolute;
+		display: inline-block;
+		bottom:0;
+		left:0;
+		content: "";
+		background:rgba(42,112,118,0.8);
+		height: 60px;
+		padding:2px 17px;
+		box-sizing: border-box;
+		text-align: left;
+	}
+	.container_for_advices .all_advices .advice_elem a{
+		font: 18px/24px 'Roboto Condensed';
+		border-bottom: 1px solid #fff;
+		color: #fff;
+	}
+	.container_for_registration{
+		padding:30px 0 57px;
+	}
+	.container_for_registration h2{
+		font:bold 32px 'Roboto Condensed';
+		text-align: center;
+		border-bottom: 1px solid #e6e2e2;
+	}
+	.container_for_registration form{
+		margin-top:30px;
+		padding:40px 20px;
+		background: #fed34f;
+		border-radius: 3px;
+	}
+	.container_for_registration form input[type="text"]{
+		width: 370px;
+		height: 45px;
+		padding:15px 20px;
+		margin-right: 16px;
+		box-sizing: border-box;
+		background: #fff;
+		border:none;
+		border-bottom: 1px solid #dbb53f;
+	}
+	.container_for_registration form input[type="text"]::placeholder{
+		font:16px 'Roboto Condensed';
+		color: #9b9b9b;
+	}
+	.container_for_registration form input[type="submit"]{
+		width: 140px;
+		height: 45px;
+		border:none;
+		border-bottom: 1px solid #4c97a1;
+		background: #6ac4b8;
+		color: #fff;
+		font:18px 'Roboto Condensed';
+	}
+	footer{
+		background: #157d8c;
+	}
+	footer nav{	
+		border-bottom: 1px solid #85e8db;
+	}
+	.container_for_logo_second{
+		position: relative;
+	}
+	footer .logo_sign{
+		float: left;
+		margin:22px 0 18px 0;
+	}
+	footer .logo_sign p{
+		color:#6ac4b8;
+	}
+	footer .logo_sign:before{
+		background:url("sprite_vertical.png") 0px -326px;
+	}
+	footer .container_for_image_second{
+		float: left;
+		position: absolute;
+		content: "";
+		top:-8px;
+		left: 246px;
+		background:url("sprite_vertical.png") -7px 0;
+		width: 356px;
+		height: 156px;
+	}
+	footer .soc_menu{
+		float: right;
+		margin:30px 0 87px auto;
+		/*position: relative;*/
+	}
+	footer .soc_menu span{
+		font:16px/32px 'Roboto Condensed';
+		color:#fff;
+		vertical-align: top;
+	}
+	footer .soc_menu span+span{
+		padding-left: 20px;
+		margin-right: 8px;
+		position: relative;
+	}
+	footer .soc_menu span+span:before{
+		display: block;
+		position: absolute;
+		content: "";
+		top:0;
+		left: 3px;
+		width: 12px;
+		height: 14px;
+		border-radius: 50%;
+		border:1px solid #fff;
+	}
+	footer .soc_menu span+span:after{
+		display: block;
+		position: absolute;
+		content: "";
+		top:3px;
+		left: 7px;
+		width: 6px;
+		height: 8px;
+		border-radius: 48%;
+		border-top:1px solid #fff;
+		border-bottom:1px solid #fff;
+		border-left:1px solid #fff;
+	}
+	.clearfix:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	footer .soc_menu a{
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		margin:0 2px;
+		border-radius: 50%;
+		background:url("sprite_vertical.png") -64px -296px;
+		font-size: 0;
+	}
+	footer .soc_menu a+a{
+		background:url("sprite_vertical.png") 0px -296px;
+	}
+	footer .soc_menu a+a+a{
+		background:url("sprite_vertical.png") -31px -296px;
+	}
